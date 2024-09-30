@@ -20,7 +20,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
 
   //Devuelve los usuarios filtrados
-  //Solo cuando el searchTerm cambia re calcula
+  //Solo cuando el searchTerm cambia recalcula los usuarios filtrados
   const filteredUsers = useMemo(() => {
     return initialUsers.filter((user) =>
       user.name.toLowerCase().includes(searchTerm.toLowerCase())
